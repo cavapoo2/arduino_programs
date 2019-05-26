@@ -21,3 +21,7 @@ export AVR_TOOLS_DIR=$HOME/arduino/arduino-1.8.7/hardware/tools/avr
 
 to run make sure board is connected, then in the myfirstProject folder do
 make upload
+
+Note: if i you have the hex file then you can run the avrdude like so, assuming prog is called led.hex :
+
+avrdude -F -V -c arduino -p ATMEGA328P -P /dev/ttyACM0 -b 115200 -U flash:w:led.hex
